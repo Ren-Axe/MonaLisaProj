@@ -5,12 +5,12 @@ from PIL import Image
 image = Image.open(r"C:\Users\renax\OneDrive\Pictures\My_pro_ASCII\Mona_Lisa.jpg").convert("L")
 
 # Масштабируем изображение
-new_width = 500
+new_width = 300
 new_height = int(new_width * image.size[1] / image.size[0] * 0.5)
 optimal_size_image = image.resize((new_width, new_height))
 
 # Определяем ASCII-шкалу
-ascii_simbols = "@%#*+=-:. "
+ascii_simbols = "@%$#*+=-:. "
 
 # Преобразуем изображение в ASCII-графику
 def image_in_ascii(optimal_size_image, ascii_simbols):
